@@ -35,12 +35,11 @@ const PostUser = styled.div `
       padding: 2px 8px;
       font-size: 12px;
       font-weight: bold;
-      background: #4869f6;
+      background-color: #4869f6;
       border-radius: 5px;
       color: #fff;
     }
-  }
-`
+  `
 
 const PostContent = styled.div`
   margin-top: 30px;
@@ -91,15 +90,15 @@ const BtnDiv = styled.div`
 `
 
 const Post = styled.div`
-  width: 100%
+  width: 100%;
   height: auto;
-  background: #fffff;
+  background-color: #fff;
   padding: 30px 20px;
   border: 1px solid #d9d9da;
   .title {
     font-weight: bold;
     font-size: 30px;
     margin-left: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; }
 ` 
 export { PostDiv, SpinnerDiv, Post, BtnDiv, PostUser, PostContent }

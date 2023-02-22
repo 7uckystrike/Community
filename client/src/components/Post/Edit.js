@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import {UploadDiv, UploadForm, UploadButtonDiv} from '../../style/UploadCSS'
+import {UploadDiv, UploadForm, UploadButton} from '../../style/UploadCSS'
 import ImageUpload from './ImageUpload'
 
 
@@ -84,7 +84,7 @@ const Edit = () => {
           onChange={(event) => {
             setContent(event.currentTarget.value)
           }} />
-        <UploadButtonDiv>
+        <UploadButton>
           <button onClick={onSubmit}>
             전송
           </button>
@@ -94,7 +94,7 @@ const Edit = () => {
           }}>
             취소
           </button>
-        </UploadButtonDiv>
+        </UploadButton>
       </UploadForm>
       
     </UploadDiv>

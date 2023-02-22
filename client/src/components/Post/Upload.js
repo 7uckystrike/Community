@@ -1,9 +1,10 @@
 import React, { useState, useEffect }  from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux'
-import ImageUpload from './ImageUpload';
-import {UploadDiv, UploadForm, UploadButtonDiv} from '../../style/UploadCSS'
 import axios from 'axios';
+
+import ImageUpload from './ImageUpload';
+import {UploadDiv, UploadForm, UploadButton} from '../../style/UploadCSS'
 
 
 const Upload = (props) => {
@@ -16,7 +17,7 @@ const Upload = (props) => {
 
   useEffect(() => {
     if(!user.accessToken) {
-      alert("엇! 아직 우리끼리 함께하지 않고 있군요!")
+      alert("회원 전용")
       navigate("/login");
     }
   },[])
@@ -24,10 +25,10 @@ const Upload = (props) => {
   function onSubmit(event) {
     event.preventDefault();
     if (title === "" || content === "") {
-      return (
-        alert ("모든 항목을 채워주세요!")
-      )}  
-    let body  = {
+      return alert ("모든 항목을 채워주세요.")
+    }
+
+    let body = {
       title : title,
       content : content,
       image : image,
@@ -39,7 +40,7 @@ const Upload = (props) => {
         if(response.data.success) {
           alert("글 작성이 완료되었습니다.")
           navigate("/");
-        }else {
+        } else {
           alert("글 작성에 실패하였습니다.")
         }
       }).catch((error) => {
@@ -68,14 +69,17 @@ const Upload = (props) => {
           onChange={(event) => {
             setContent(event.currentTarget.value)
           }} />
-        <UploadButtonDiv>
+        <UploadButton>
           <button onClick={onSubmit}>
             전송
           </button>
-        </UploadButtonDiv>
+        </UploadButton>
       </UploadForm>  
     </UploadDiv>
   )
 }
 
 export default Upload
+
+
+// 23년 2월 22일 수정

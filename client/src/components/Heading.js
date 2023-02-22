@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+
 import firebase from '../firebase'
 
 const Heading = () => {
@@ -10,10 +11,10 @@ const Heading = () => {
 
   const logOutHandler = () => {
     firebase.auth().signOut();
-    navigate("/")
-  }
+    navigate("/")}
+  
   return ( 
-    <Navbar bg="primary" expand="lg" variant="dark">
+    <Navbar bg="dark" expand="lg" variant="dark">
       <Container>
         <Navbar.Brand href="/">Community</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,47 +26,25 @@ const Heading = () => {
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
           {user.accessToken === "" ? (
-            <Link 
-              to="/login" 
-              style={{ 
-                color: "white", 
-                textDecoration: "none"
-              }}
-            >
-              login
-            </Link>
-            
-          ) : (
+            <Link to="/login" 
+                  style={{ color: "white", textDecoration: "none"}}> login </Link>
+            ) : (
             <>
-              <Navbar.Text
-              onClick={logOutHandler}
-              style={{
-                color: "white",
-                cursor: "pointer",
-                marginRight: "20px"
-              }}
-            >
-              Logout
-              </Navbar.Text>
+              <Navbar.Text onClick={logOutHandler}
+                           style={{ color: "white", cursor: "pointer", marginRight: "20px"}}> Logout </Navbar.Text>
               <Navbar.Text>
                 <Link to = "/Mypage"
-                  style={{
-                    color: "white",
-                    cursor: "pointer",
-                    textDecoration: "none"
-                }}>
-                  My page
-                </Link>
+                      style={{ color: "white", cursor: "pointer", textDecoration: "none"}}> My page </Link>
               </Navbar.Text>
             </>
           )} 
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
   )
 }
 
 export default Heading
 
 
+// 23년 2월 22일 수정

@@ -1,10 +1,13 @@
 import React from 'react'
-import { ListDiv, ListItem, ListUser} from '../../style/ListCSS'
-import { Link } from 'react-router-dom'
-import { useSelector } from "react-redux";
+import Avatar from 'react-avatar' 
 import moment from 'moment'
 import 'moment/locale/ko'
-import Avatar from 'react-avatar' 
+
+import { Link } from 'react-router-dom'
+import { useSelector } from "react-redux";
+
+import { ListDiv, ListItem, ListUser} from '../../style/ListCSS'
+
 
 const List = (props) => {
   const user = useSelector((state) => state.user);
@@ -20,28 +23,20 @@ const List = (props) => {
   return (
     <ListDiv>
       {props.postList.map((post, index)=>{
-        return(
+        return (
           <ListItem key={index}>
             <Link to = {`/post/${post.postNum}`}>
-              <p className="title">{post.title}</p>
               <ListUser>
-                <Avatar
-                  size="40"
-                  round={true}
-                  src={post.author.photoURL}
-                  className="Avatar"
-                />
-              <div>
-                <p className="displayName">
-                  {post.author.displayName}
-                  {user.uid === post.author.uid && (
-                    <span className="writer">작성자</span>
-                  )}
-                </p>
-                <p className="postTime">
-                  {SetTime(post.createdAt, post.updatedAt)}
-                </p>
-              </div>
+                <Avatar size="90" src={post.author.photoURL}/>
+                <div className="item">
+                  <p className="title">{post.title}</p>
+                  <span className="displayName">
+                      {post.author.displayName}
+                      {user.uid === post.author.uid && (
+                        <span className="writer">작성자</span>)} </span>
+                  <span className="postTime">
+                      {SetTime(post.createdAt, post.updatedAt)} </span>
+                </div>
               </ListUser>
             </Link>
           </ListItem>
@@ -52,3 +47,5 @@ const List = (props) => {
 }
 
 export default List
+
+// 23년 2월 22일 수정

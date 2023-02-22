@@ -68,7 +68,7 @@ const MainPage = () => {
     <div>
       <GNBDiv>
       <DropdownButton 
-        variant="outline-primary" 
+        variant="outline-dark" 
         title={sort}>
           <Dropdown.Item onClick={() => setSort("최신순")}>
             최신순

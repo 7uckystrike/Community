@@ -1,42 +1,42 @@
 import styled from '@emotion/styled'
 
 const UploadDiv = styled.div`
-  width: 100%
+  width: 100%;
   margin-top: 1rem;
-`;
+  margin-bottom: 1rem;
+`
 
 const UploadForm = styled.form`
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  #title {
+  input {
     border-radius: 10px;
     border: 1px solid #c6c6c6;
     padding: 10px;
-    padding-left: 10px;
-    margin-bottom: 10px;
-    &: active, &:focus {
+    &:active, 
+    &:focus {
       outline: none;
     }
   }
   textarea {
-    min-height: 250px;
+    min-height: 350px;
     resize: none;
     border-radius: 10px;
     border: 1px solid #c6c6c6;
     padding: 10px;
-    padding-left: 10px;
-    &: active, &:focus {
+    &:active, 
+    &:focus {
       outline: none;
     }
     &::-webkit-scrollbar {
       width: 10px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: grey;
+      background-color: gray;
       border-radius: 15px;
-      background-colip: padding-box;
+      background-clip: padding-box;
       border: 2px solid transparent;
     }
     &::-webkit-scrollbar-track {
@@ -47,42 +47,29 @@ const UploadForm = styled.form`
   }
   label {
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 10px;
   }
-`;
+`
 
-const UploadButtonDiv = styled.div`
+const UploadButton = styled.div`
   margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
   button {
-    width: 60px;
-    height: 45px;
-    background-color: #4869f6;
-    font-size: 15px;
-    border-radius: 4px;
-    border: 1px solid #4869f6;
-    color: white;
-    font-weight: bold;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
     &:hover {
-      background-color: white;
-      color: black;
-      border: 1px solid white;
-    }
-    &.cancel {
-      margin-left: 10px;
       background-color: #fff;
-      color: black;
-      border: 1px solid #d9d9da;
-      &:hover {
-        background-color: #4869f6;
-        color: #fff;
-        border: 1px solid #4869f6;
-      }
+      color: #000;
+      border: 1px solid #000;
     }
   }
-`;
+`
+
+export { UploadDiv, UploadForm, UploadButton}
 
 
-
-export { UploadDiv, UploadForm, UploadButtonDiv}
+// 23년 2월 22일 수정
