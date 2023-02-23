@@ -17,9 +17,11 @@ function ImageUpload(props) {
     <div>
       <Form.Control
         type="file"
-        className="shadow-none"
         accept="image/*"
         onChange={FileUpload}
+        style={{
+          marginTop:"10px",
+          paddingLeft: "20px"}}
       />
     </div>
   );

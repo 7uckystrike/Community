@@ -60,7 +60,7 @@ const Upload = (props) => {
             setTitle(event.currentTarget.value)
           }} />
 
-        <ImageUpload setImage={setImage} />
+      <ImageUpload setImage={setImage} />
         
         <label htmlFor="content">내용</label>
         <textarea
