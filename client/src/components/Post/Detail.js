@@ -32,11 +32,6 @@ const Detail = (props) => {
       <Post>
         <p className="title">{props.postInfo.title}</p>
         <PostUser>
-          <Avatar 
-            size="40" 
-            round={true} 
-            src={props.postInfo.author.photoURL}
-            className="Avatar" />
           <p className="displayName">
             {props.postInfo.author.displayName}
             {user.uid === props.postInfo.author.uid && (

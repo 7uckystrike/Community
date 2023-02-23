@@ -37,7 +37,7 @@ const RepleUploadDiv = styled.div`
       border-radius: 0px 10px 10px 0px;
       border: 0.5px solid #d9d9da;
       font-weight: bold;
-      background-color: ##d9d9da;
+      background-color: #d9d9da;
       &:hover,
       &:active {
         border: 0.5px solid darkgrey;
@@ -78,7 +78,7 @@ const RepleContentDiv = styled.div`
       p {
         font-size: 12px;
         font-weight: bold;
-        color: darkgrey;
+        color: #000;
         margin-left: 10px;
       }
     }
@@ -89,9 +89,9 @@ const RepleContentDiv = styled.div`
       padding: 2px 8px;
       font-size: 10px;
       font-weight: bold;
-      background: #4869f6;
+      background: #ffd400;
       border-radius: 5px;
-      color: #fff;
+      color: #000;
     }
 
     .modalControl {
@@ -142,3 +142,6 @@ const RepleContentDiv = styled.div`
 `;
 
 export { RepleAreaDiv, RepleUploadDiv, RepleListDiv, RepleContentDiv };
+
+
+// 23년 2월 23일 수정

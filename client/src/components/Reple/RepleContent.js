@@ -69,10 +69,8 @@ function RepleContent(props) {
       <div className="author">
         <div className="userInfo">
           <Avatar
-            size="30"
-            round={true}
+            size="20"
             src={props.reple.author.photoURL}
-            style={{ border: "1px solid #c6c6c6" }}
           />
           <p>
             {props.reple.author.displayName}

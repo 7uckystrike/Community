@@ -24,8 +24,8 @@ const LoginDiv = styled.div`
   }
   button {
     padding: 5px 10px;
-    background-color: #4869f5;
-    border: 1px solid #4869f5;
+    background-color: #000;
+    border: 1px solid #000;
     color: white;
     margin-top: 10px;
     &:hover {
@@ -58,10 +58,10 @@ const MyPageDiv = styled.div`
     }
     .Mypagebtn {
       height: 100%;
-      border: 0.5px solid #4869f5;
+      border: 0.5px solid #000;
       border-radius: 6px;
       margin-top: 30px;
-      background-color: #4869f5;
+      background-color: #000;
       padding: 10px 20px;
       color: #fff;
       font-weight: bold;
@@ -69,6 +69,6 @@ const MyPageDiv = styled.div`
   }
 `;
 
-;
-
 export { LoginDiv, MyPageDiv };
+
+//23년 2월 23일 수정

@@ -47,24 +47,19 @@ justify-content: flex-start;
   .postTime {
       font-size: 9px;
       background-color: #efefef;
-  }  
+  }
+  .writer {
+      position: relative;
+      top: -1px;
+      margin-left: 8px;
+      padding: 2px 8px;
+      font-size: 9px;
+      font-weight: bold;
+      background-color: #ffd400;
+      border-radius: 5px;
+      color: #000;
+    }
 `
-
-
-
-
-
-  //   .writer {
-  //     position: relative;
-  //     top: -3px;
-  //     margin-left: 8px;
-  //     padding: 2px 8px;
-  //     font-size: 12px;
-  //     font-weight: bold;
-  //     background: #4869f6;
-  //     border-radius: 5px;
-  //     color: #fff;
-  //   }
 
 export { ListDiv, ListItem, ListUser }
 

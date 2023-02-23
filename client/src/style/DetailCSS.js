@@ -17,15 +17,11 @@ const PostUser = styled.div `
     justify-content: flex-start;
     border-bottom: 1px solid #eee;
 
-    .Avatar {
-      border: 1px solid #eee; 
-      margin-right: 13px;
-      margin-top: -5px;
-    }
-
     .displayName {
       margin-bottom: 13px;
-      font-size:16px;
+      font-size:13px;
+      font-weight: bold;
+      margin-left: 10px;
     }
 
     .writer {
@@ -33,11 +29,11 @@ const PostUser = styled.div `
       top: -1px;
       margin-left: 8px;
       padding: 2px 8px;
-      font-size: 12px;
+      font-size: 9px;
       font-weight: bold;
-      background-color: #4869f6;
+      background-color: #ffd400;
       border-radius: 5px;
-      color: #fff;
+      color: #000;
     }
   `
 
@@ -54,8 +50,6 @@ const SpinnerDiv = styled.div`
   justify-content: center;
 `
 
-
-
 const BtnDiv = styled.div`
   width: 100%;
   display: flex;
@@ -68,22 +62,22 @@ const BtnDiv = styled.div`
     &.edit {
       background-color: white;
       color: black;
-      border: 1px solid #d9d9da;
+      border: 1px solid #000;
       &:hover {
-        background-color: #4869f6;
-        color: white;
-        border: 1px solid #4869f6;
+        background-color: #ffd400;
+        color: #000;
+        border: 1px solid #ffd400;
       }
     }
     &.delete {
       margin-left: 10px;
-      background-color: #4869f6;
+      background-color: #000;
       color: white;
-      border: 1px solid #4869f6;
+      border: 1px solid #000;
       &:hover {
-        background-color: white;
-        color: #4869f6;
-        border: 1px solid white;
+        background-color: #ffd400;
+        color: #000;
+        border: 1px solid #ffd400;
       }
     }
   }
@@ -102,3 +96,5 @@ const Post = styled.div`
     margin-bottom: 20px; }
 ` 
 export { PostDiv, SpinnerDiv, Post, BtnDiv, PostUser, PostContent }
+
+//23년 2월 23일 수정

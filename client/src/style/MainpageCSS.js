@@ -5,27 +5,24 @@ const GNBDiv = styled.div`
   padding-bottom: 1rem;
   max-width: 756px;
   margin: 0 auto !important;
-
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: space-between;
-
-    input {
-      padding: 8px 20px;
-      border: 0.5px solid #4869f5;
-      border-radius: 6px;
-      height: 100%;
-      &:active,
-      &:focus {
-        outline: none;
-      }
+  input {
+    padding: 8px 20px;
+    border: 0.5px solid #000;
+    border-radius: 6px;
+    height: 100%;
+    &:active,
+    &:focus {
+      outline: none;
     }
-    button {
-      height: 100%;
-      border: 0.5px solid #4869f5;
-      margin-bottom: -1px;
-    }
+  }
+  button {
+    height: 100%;
+    border: 0.5px solid #000;
+    margin-bottom: -1px;
   }
 
   @media (max-width: 756px) {
@@ -42,7 +39,7 @@ const GNBDiv = styled.div`
       margin-left: 1rem;
     }
   }
-`;
+`
 
 const FooterDiv = styled.div`
   width: 100%;
@@ -53,11 +50,13 @@ const FooterDiv = styled.div`
     height: 50px;
     border: none;
     border-radius: 6px;
-    background-color: #4869f5;
+    background-color: #000;
     padding: 5px 10px;
     font-weight: bold;
     color: white;
   }
-`;
+`
 
 export { GNBDiv, FooterDiv };
+
+//23년 2월 23일 수정
