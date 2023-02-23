@@ -2,19 +2,19 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const app = express();
-const port = 8080;
-const config = require("./config/key.js")
+const port = process.env.PORT || 8080;
+const config = require("./server/config/key.js")
 const cors = require('cors');
 
 app.use(express.json());
 app.use(cors())
 app.use("/image", express.static("./image"));
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
-app.use("/api/post", require("./Router/Post.js"));
-app.use("/api/user", require("./Router/User.js"));
-app.use("/api/reple", require("./Router/Reple.js"));
+app.use("/api/post", require("./server/Router/Post.js"));
+app.use("/api/user", require("./server/Router/User.js"));
+app.use("/api/reple", require("./server/Router/Reple.js"));
 
 app.listen(port, () => {
   mongoose.connect(config.mongoURI 
@@ -27,10 +27,10 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));  
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));  
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));  
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));  
 });
 
