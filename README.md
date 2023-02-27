@@ -19,3 +19,18 @@ https://react-board.herokuapp.com/
 <br />
 
 ### Preview
+
+<img src="https://github.com/7uckystrike/community/blob/main/preview/join.png?raw=true" width="500" heigt="auto" />
+<span>가입창</span>
+<br/><br/>
+<img src="https://github.com/7uckystrike/community/blob/main/preview/login.png?raw=true" width="500" heigt="auto"/>
+<span>로그인창</span>
+<br/><br/>
+<img src="https://github.com/7uckystrike/community/blob/main/preview/upload.png?raw=true" width="500" heigt="auto"/>
+<span>글쓰기</span>
+<br/><br/>
+<img src="https://github.com/7uckystrike/community/blob/main/preview/reple.png?raw=true" width="500" heigt="auto"/>
+<span>댓글</span>
+<br/><br/>
+<img src="https://github.com/7uckystrike/community/blob/main/preview/list.png?raw=true" width="500" heigt="auto"/>
+<span>목록</span>
